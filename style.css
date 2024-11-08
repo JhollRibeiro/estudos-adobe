@@ -1,0 +1,45 @@
+/* Seção de Introdução */
+.intro {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+/* Seção de Serviços */
+.services {
+  margin-bottom: 2em;
+}
+
+.service {
+  margin-bottom: 1em;
+}
+
+.service h3 {
+  color: #333;
+}
+
+/* Seção de Galeria */
+.gallery {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.gallery-images img {
+  width: 30%;
+  margin: 0.5em;
+  border-radius: 8px;
+}
+
+/* Seção de Depoimentos */
+.testimonials {
+  background-color: #f9f9f9;
+  padding: 2em;
+  border-radius: 8px;
+}
+
+.testimonial {
+  margin-bottom: 1.5em;
+}
+
+.testimonial p {
+  font-style: italic;
+}
