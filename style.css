@@ -1,45 +1,191 @@
-/* Seção de Introdução */
+/* Configurações Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f9;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garantir que a altura mínima seja a altura da tela */
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2em;
+  flex-grow: 1; /* Isso permite que o conteúdo cresça para preencher o espaço */
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background: #2C3E50;
+}
+
+header nav .site-name {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 1em;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #4A90E2;
+}
+
+/* Banner */
+header .banner {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-top: 0; /* Removido o topo adicional */
+}
+
+/* Introdução */
 .intro {
   text-align: center;
-  margin-bottom: 2em;
+  padding: 2em 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2em;
 }
 
 /* Seção de Serviços */
 .services {
+  margin-top: 3em;
+  text-align: center; /* Garante que o título e o conteúdo fiquem centralizados */
+}
+
+.services h2 {
+  font-size: 2.5em;
+  margin-bottom: 1.5em;
+  color: #333;
+}
+
+.services .service-container {
+  display: flex; /* Usa Flexbox para alinhamento */
+  justify-content: space-between; /* Espaço entre os cards */
+  gap: 2em; /* Espaçamento entre os cards */
+  flex-wrap: wrap; /* Permite que os cards quebrem para a linha de baixo em telas pequenas */
+  margin-top: 2em;
+}
+
+/* Estilo das caixas de serviço */
+.services .service {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Ajuste o tamanho dos cards */
+  text-align: center;
   margin-bottom: 2em;
 }
 
-.service {
-  margin-bottom: 1em;
-}
-
-.service h3 {
-  color: #333;
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .services .service {
+      width: 100%; /* Os cards ficam com 100% de largura em telas menores */
+  }
 }
 
 /* Seção de Galeria */
 .gallery {
-  margin-bottom: 2em;
   text-align: center;
+  margin-top: 3em;
+}
+
+.gallery-images {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1em;
 }
 
 .gallery-images img {
   width: 30%;
-  margin: 0.5em;
   border-radius: 8px;
 }
 
 /* Seção de Depoimentos */
 .testimonials {
-  background-color: #f9f9f9;
-  padding: 2em;
-  border-radius: 8px;
+  margin-top: 3em;
 }
 
 .testimonial {
+  background-color: #fff;
+  padding: 2em;
   margin-bottom: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial p {
-  font-style: italic;
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #333;
+  color: #fff;
+  margin-top: 2em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Estilo para o formulário de Contato */
+.contact form {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contact button {
+  background-color: #4A90E2;
+  color: white;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.contact button:hover {
+  background-color: #357ABD;
 }
