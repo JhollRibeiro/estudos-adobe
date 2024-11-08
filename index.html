@@ -3,42 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site - Página Inicial</title>
+    <title>Estudos Adobe - Página Inicial</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Bem-vindo ao Meu Site</h1>
+        <!-- Menu de Navegação com o Nome do Site à Esquerda -->
+        <nav>
+            <span class="site-name">Estudos Adobe</span>
+            <div>
+                <a href="index.html">Início</a>
+                <a href="about.html">Sobre</a>
+                <a href="contact.html">Contato</a>
+            </div>
+        </nav>
+
+        <!-- Banner abaixo do menu -->
+        <img src="images/imagem1.jpg" alt="Banner do site" class="banner">
     </header>
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="about.html">Sobre</a>
-        <a href="contact.html">Contato</a>
-    </nav>
+
     <div class="container">
         <!-- Seção de Introdução -->
         <section class="intro">
             <h2>Bem-vindo ao nosso site!</h2>
             <p>Aqui você encontra informações sobre nossos serviços e produtos de qualidade, feitos especialmente para você. Explore o site e saiba mais sobre o que oferecemos!</p>
-            <img src="images/imagem1.jpg" alt="Imagem de boas-vindas">
         </section>
         
         <!-- Seção de Serviços -->
         <section class="services">
-            <h2>Nossos Serviços</h2>
-            <div class="service">
-                <h3>Consultoria</h3>
-                <p>Oferecemos consultoria especializada para ajudar você a alcançar seus objetivos de negócio com eficiência e precisão.</p>
-            </div>
-            <div class="service">
-                <h3>Desenvolvimento Web</h3>
-                <p>Nossa equipe de desenvolvimento cria websites modernos e funcionais, focados na experiência do usuário.</p>
-            </div>
-            <div class="service">
-                <h3>Suporte Técnico</h3>
-                <p>Estamos disponíveis para oferecer suporte técnico de alta qualidade, ajudando você a resolver problemas rapidamente.</p>
-            </div>
-        </section>
+          <h2>Nossos Serviços</h2>
+          <div class="service-container">
+              <div class="service">
+                  <h3>Consultoria</h3>
+                  <p>Oferecemos consultoria especializada para ajudar você a alcançar seus objetivos de negócio com eficiência e precisão.</p>
+              </div>
+              <div class="service">
+                  <h3>Desenvolvimento Web</h3>
+                  <p>Nossa equipe de desenvolvimento cria websites modernos e funcionais, focados na experiência do usuário.</p>
+              </div>
+              <div class="service">
+                  <h3>Suporte Técnico</h3>
+                  <p>Estamos disponíveis para oferecer suporte técnico de alta qualidade, ajudando você a resolver problemas rapidamente.</p>
+              </div>
+          </div>
+      </section>
 
         <!-- Seção de Galeria -->
         <section class="gallery">
@@ -68,8 +76,9 @@
             </div>
         </section>
     </div>
+
     <footer>
-        <p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Estudos Adobe. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
