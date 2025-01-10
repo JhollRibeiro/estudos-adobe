@@ -148,13 +148,6 @@
     <footer>
         <p>&copy; 2024 Estudos Adobe. Todos os direitos reservados.</p>
     </footer>
-
-    <script>
-    var ecid = '';
-    alloy('getIdentity', { namespaces: ['ECID'] }).then(function (result) {
-      ecid = result.identity.ECID;
-    });
-    document.getElementById("ecid").textContent(`ECID: ${ecid}`);
 </script>
 </body>
 </html>
