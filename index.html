@@ -70,6 +70,18 @@
     </script>
 
     <script src="https://assets.adobedtm.com/e72b4113c11a/686e133dde79/launch-3195197daaa4-development.min.js" async></script>
+
+    <script>
+        function getEcid() {
+            var ecid = '';
+
+            alloy('getIdentity', { namespaces: ['ECID'] }).then(function (result) {
+                ecid = result.identity.ECID;
+            });
+
+            return ecid;
+        }
+    </script>
     
 </head>
 <body>
@@ -89,6 +101,9 @@
     </header>
 
     <div class="container">
+        <section>
+            <h3>ECID: <script>getEcid();</script></h3>
+        </section>
         <!-- Seção de Introdução -->
         <section class="intro">
             <h2>Bem-vindo ao nosso site!</h2>
