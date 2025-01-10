@@ -69,20 +69,7 @@
             (document, document.location.href.indexOf("adobe_authoring_enabled") !== -1, "body { opacity: 0 !important }", 3000);
     </script>
 
-    <script src="https://assets.adobedtm.com/e72b4113c11a/686e133dde79/launch-3195197daaa4-development.min.js" async></script>
-
-    <script>
-        function getEcid() {
-            var ecid = '';
-
-            alloy('getIdentity', { namespaces: ['ECID'] }).then(function (result) {
-                ecid = result.identity.ECID;
-            });
-
-            return ecid;
-        }
-    </script>
-    
+    <script src="https://assets.adobedtm.com/e72b4113c11a/686e133dde79/launch-3195197daaa4-development.min.js" async></script>    
 </head>
 <body>
     <header>
@@ -102,7 +89,7 @@
 
     <div class="container">
         <section>
-            <h3>ECID: <script>getEcid();</script></h3>
+            <h3 id="ecid"></script></h3>
         </section>
         <!-- Seção de Introdução -->
         <section class="intro">
@@ -161,5 +148,13 @@
     <footer>
         <p>&copy; 2024 Estudos Adobe. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+    var ecid = '';
+    alloy('getIdentity', { namespaces: ['ECID'] }).then(function (result) {
+      ecid = result.identity.ECID;
+    });
+    document.getElementById("ecid").textContent((`ECID: ${ecid}`);
+</script>
 </body>
 </html>
